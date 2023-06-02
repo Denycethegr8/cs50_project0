@@ -2,45 +2,137 @@ body {
     background-color: #202124;
 }
 
-form {
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+$text-color:#e8eaed;
+$cursor:pointer;
+
+.upper-right {
+    display:flex;
+    text-align: center;
+    justify-content: end;
+    height:100%;
+}
+
+a {
+    margin:20px;
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+@mixin flex-c-center {
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.center{
+    @include flex-c-center;
+    position: absolute;
+    width:100%;
+    left:50%;
+    top:50%;
+    Transform: translate(-50%, -50%);
+}
+
+img {
+    height:92px;
+}
+
+form {
+    @include flex-c-center;
+    padding:20px;
+    margin:6px;
+}
+
 input[type="text"] {
     background-color: transparent;
-    color:#e8eaed;
-    border: 1px #bdc1c6 solid;
+    color:$text-color;
+    font-size:16px;
+    border: 0.5px #bdc1c6 solid;
     border-radius:50px;
     width:559px;
-    height:40px;
-    margin-bottom:30px;
-    padding-left:25px;
+    height:27px;
+    padding:10px 0 10px 25px;
 }
 
 input[type="text"]:hover {
-    background-color: #bdc1c6;
+    background-color: #303134;
+    border:0.5px #303134 solid;
 }
 
-input[type="submit"] {
+input:focus { 
+    outline: none;
+}
+
+.buttons {
+    padding:18px 0;
+}
+
+input[type="submit"], button {
     background-color: #303134;
-    color:#e8eaed;
-    border: none;
+    color:$text-color;
+    border: 1px #303134 solid;
     font-size:14px;
     padding: 8px 16px;
+    margin:11px 4px;
     border-radius:5px;
-    cursor: pointer;
+    cursor:$cursor;
 }
 
-input[type="submit"]:hover {
-    padding:7px 16px;
+input[type="submit"]:hover, button:hover {
+    padding:8px 16px;
     border: 1px #e8eaed solid;
 }
+
+.logo-div {
+    position: relative;
+    width:272px;
+    height:140px;
+
+    p {
+        color: #4487f6;
+        font: 16px/16px roboto-regular, arial, sans-serif;
+        position: absolute;
+        bottom:0;
+        left: 215px;
+        margin:0;
+    }
+    img {
+        position: absolute;
+        height:94px;
+        bottom:0;
+        margin:auto;
+        left:0;
+        right:0;
+    }
+}
+
+
+  
+@media only screen and (min-width:400px) and (max-width: 650px) {
+    input[type="text"] {
+        background-color: transparent;
+        color:$text-color;
+        font-size:16px;
+        border: 0.5px #bdc1c6 solid;
+        border-radius:50px;
+        width: calc(100vw - 60px);
+        height:27px;
+        padding:10px 0 10px 25px;
+    }
+  }
+
+  
+  @media only screen and (max-width: 400px) {
+    input[type="text"] {
+        background-color: transparent;
+        color:$text-color;
+        font-size:16px;
+        border: 0.5px #bdc1c6 solid;
+        border-radius:50px;
+        width: 300px;
+        height:27px;
+        padding:10px 0 10px 25px;
+    }
+  }
