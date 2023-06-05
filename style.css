@@ -1,19 +1,24 @@
 body {
   background-color: #202124;
+  font-family: Arial, sans-serif;
+}
+
+.advanced-form {
+  color: white;
 }
 
 .upper-right {
   display: flex;
-  text-align: center;
   justify-content: end;
-  height: 100%;
+  height: 48px;
 }
 
 a {
-  margin: 20px;
+  align-self: center;
   color: #ffffff;
   font-size: 13px;
   text-decoration: none;
+  padding-right: 15px;
 }
 
 .center {

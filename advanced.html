@@ -8,20 +8,40 @@
     <div class="upper-right">
         <a href="index.html">Google Search</a>
     </div>
-    <div class="center">
-      <div class="logo-div"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png" alt="Google" /></div>
-      <form action="https://www.google.com/search">
-        <input id="text-input" type="text" name="q" />
-        <div class="buttons">
-          <input type="submit" value="Google Search" />
-          <button
-            onclick="location.href='https://www.google.com/doodles'"
-            type="button"
-          >
-            I'm Feeling Lucky
-          </button>
-        </div>
-      </form>
+    <div class="advanced-form">
+      <p>Advanced Search</p>
+      <div class="advanced-inputs">
+        <p>Find pages with...</p>
+        <form action="https://www.google.com/search">
+          
+<!-- https://www.google.com/search?as_q=a&as_epq=b&as_oq=c&as_eq=d&as_occt=any&safe=images&as_filetype=&tbs=
+ -->
+
+          <div class="as">
+            <p>all these worlds: </p>
+            <input id="text-input" type="text" name="q" />
+            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          </div>
+          <div class="as_epq">
+            <p>all these worlds: </p>
+            <input id="text-input" type="text" name="q" />
+            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          </div>
+          <div class="as_oq">
+            <p>all these worlds: </p>
+            <input id="text-input" type="text" name="q" />
+            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          </div>
+          <div class="as_eq=d">
+            <p>all these worlds: </p>
+            <input id="text-input" type="text" name="q" />
+            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          </div>
+          <div class="buttons">
+            <input type="submit" value="Google Search" />
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
