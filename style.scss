@@ -1,143 +1,225 @@
 body {
-    background-color: #202124;
-    font-family: Arial, sans-serif;
+  background-color: #202124;
+  font-family: Arial, sans-serif;
 }
 
-.advanced-form{
-    color:white;
-}
-
-$text-color:#e8eaed;
-$cursor:pointer;
+$text-color: #e8eaed;
+$cursor: pointer;
 
 .upper-right {
-    display:flex;
-    justify-content: end;
-    height: 48px;
+  display: flex;
+  justify-content: end;
+  height: 48px;
 }
 
 a {
-    align-self: center;
-    color: #ffffff;
-    font-size: 13px;
-    text-decoration: none;
-    padding-right:15px;
+  align-self: center;
+  color: #ffffff;
+  font-size: 13px;
+  text-decoration: none;
+  padding-right: 15px;
 }
 
 @mixin flex-c-center {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.center{
-    @include flex-c-center;
-    position: absolute;
-    width:100%;
-    left:50%;
-    top:50%;
-    Transform: translate(-50%, -50%);
+.center {
+  @include flex-c-center;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 img {
-    height:92px;
+  height: 92px;
 }
 
 form {
-    @include flex-c-center;
-    padding:20px;
-    margin:6px;
+  @include flex-c-center;
+  padding: 20px 0;
+  margin: 6px;
 }
 
-input[type="text"] {
+.center {
+  input[type="text"] {
     background-color: transparent;
-    color:$text-color;
-    font-size:16px;
+    color: $text-color;
+    font-size: 16px;
     border: 0.5px #bdc1c6 solid;
-    border-radius:50px;
-    width:559px;
-    height:27px;
-    padding:10px 0 10px 25px;
-}
+    border: 1px solid #5f6368;
+    border-radius: 50px;
+    width: 559px;
+    height: 27px;
+    padding: 10px 0 10px 25px;
+  }
 
-input[type="text"]:hover {
+  input[type="text"]:hover {
     background-color: #303134;
-    border:0.5px #303134 solid;
-}
+    border: 0.5px #303134 solid;
+  }
 
-input:focus { 
+  input:focus {
     outline: none;
-}
+  }
 
-.buttons {
-    padding:18px 0;
-}
+  .buttons {
+    padding: 18px 0;
+  }
 
-input[type="submit"], button {
+  input[type="submit"],
+  button {
     background-color: #303134;
-    color:$text-color;
+    color: $text-color;
     border: 1px #303134 solid;
-    font-size:14px;
+    font-size: 14px;
     padding: 8px 16px;
-    margin:11px 4px;
-    border-radius:5px;
-    cursor:$cursor;
-}
+    margin: 11px 4px;
+    border-radius: 5px;
+    cursor: $cursor;
+  }
 
-input[type="submit"]:hover, button:hover {
-    padding:8px 16px;
+  input[type="submit"]:hover,
+  button:hover {
+    padding: 8px 16px;
     border: 1px #e8eaed solid;
-}
+  }
 
-.logo-div {
+  .logo-div {
     position: relative;
-    width:272px;
-    height:140px;
+    width: 272px;
+    height: 140px;
 
     p {
-        color: #4487f6;
-        font: 16px/16px roboto-regular, arial, sans-serif;
-        position: absolute;
-        bottom:0;
-        left: 215px;
-        margin:0;
+      color: #4487f6;
+      font: 16px/16px roboto-regular, arial, sans-serif;
+      position: absolute;
+      bottom: 0;
+      left: 215px;
+      margin: 0;
     }
     img {
-        position: absolute;
-        height:94px;
-        bottom:0;
-        margin:auto;
-        left:0;
-        right:0;
+      position: absolute;
+      height: 94px;
+      bottom: 0;
+      margin: auto;
+      left: 0;
+      right: 0;
     }
+  }
+}
+
+#advanced-search {
+  color: #f28b82;
+  font-size: 20px;
+  margin: 25px 35px;
+}
+
+#line {
+  border-bottom: 1px solid #ebebeb;
+  border-color: #3c4043;
+  vertical-align: baseline;
+}
+
+.advanced-form {
+  padding: 0 0 0 35px;
+}
+
+.as_inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 182px 1fr 370px;
+  align-items: stretch;
+
+  .advanced-spec {
+    color: #bdc1c6;
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 11px;
+    color: #969ba1;
+  }
+
+  span {
+    color: #dadce0;
+    font-family: monospace;
+    font-size: 11px;
+    white-space: pre;
+  }
+
+  input {
+    color: #bdc1c6;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    font-size: 13px;
+    height: 25px;
+    padding: 1px 8px;
+    align-self: center;
+    margin-right: 11.5px;
+    border: 1px solid #5f6368;
+    background-color: transparent;
+  }
+
+  input:focus {
+    outline: none;
+    border-color: #8ab4f8;
+    caret-color: white;
+  }
+
+  #advanced-btn {
+    background: #8ab4f8;
+    border-color: #8ab4f8;
+    color: #202124;
+    display: block;
+    margin: 15px 12px 0 auto;
+    height:30px;
+    width:120px;
+    padding: 0 12px;
+    border-radius: 2px;
+    cursor: default;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #advanced-btn:hover {
+    background-color:#a6c7fd;
+  }
+
+  #advanced-btn:active{
+    border-color:white;
+  }
 }
 
 
-  
-@media only screen and (min-width:400px) and (max-width: 650px) {
-    input[type="text"] {
-        background-color: transparent;
-        color:$text-color;
-        font-size:16px;
-        border: 0.5px #bdc1c6 solid;
-        border-radius:50px;
-        width: calc(100vw - 60px);
-        height:27px;
-        padding:10px 0 10px 25px;
-    }
+@media only screen and (min-width: 400px) and (max-width: 650px) {
+  #text-input {
+    background-color: transparent;
+    color: $text-color;
+    font-size: 16px;
+    border: 0.5px #bdc1c6 solid;
+    border-radius: 50px;
+    width: calc(100vw - 60px);
+    height: 27px;
+    padding: 10px 0 10px 25px;
   }
+}
 
-  
-  @media only screen and (max-width: 400px) {
-    input[type="text"] {
-        background-color: transparent;
-        color:$text-color;
-        font-size:16px;
-        border: 0.5px #bdc1c6 solid;
-        border-radius:50px;
-        width: 300px;
-        height:27px;
-        padding:10px 0 10px 25px;
-    }
+@media only screen and (max-width: 400px) {
+  #text-input {
+    background-color: transparent;
+    color: $text-color;
+    font-size: 16px;
+    border: 0.5px #bdc1c6 solid;
+    border-radius: 50px;
+    width: 300px;
+    height: 27px;
+    padding: 10px 0 10px 25px;
   }
+}

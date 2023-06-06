@@ -6,40 +6,79 @@
   </head>
   <body>
     <div class="upper-right">
-        <a href="index.html">Google Search</a>
+      <a href="index.html">Google Search</a>
     </div>
+    <p id="advanced-search">Advanced Search</p>
+    <div id="line"></div>
     <div class="advanced-form">
-      <p>Advanced Search</p>
       <div class="advanced-inputs">
-        <p>Find pages with...</p>
         <form action="https://www.google.com/search">
-          
-<!-- https://www.google.com/search?as_q=a&as_epq=b&as_oq=c&as_eq=d&as_occt=any&safe=images&as_filetype=&tbs=
+          <!-- https://www.google.com/search?as_q=a&as_epq=b&as_oq=c&as_eq=d&as_occt=any&safe=images&as_filetype=&tbs=
+
+            <input type="hidden" id="hiddenBtn" name="as_occt" value="any">
+            <input type="hidden" id="hiddenBtn" name="safe" value="images">
+            <input type="hidden" id="hiddenBtn" name="as_filetype" value="tbs">
  -->
 
-          <div class="as">
-            <p>all these worlds: </p>
-            <input id="text-input" type="text" name="q" />
-            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          <div class="as_inputs">
+            <p style="color: #e8eaed; font-size: 16px; font-weight: 500">
+              Find pages with...
+            </p>
+            <div></div>
+            <p style="color: #e8eaed; font-size: 13px; font-weight: 700" class="hide">
+              To do this in the search box.
+            </p>
+            <p class="advanced-spec">all these words:</p>
+            <input type="text" name="as_q" />
+            <div>
+              <p class="hide">
+                Type the important words:
+                <span class="color-white">tri-colour rat terrier</span>
+              </p>
+            </div>
           </div>
-          <div class="as_epq">
-            <p>all these worlds: </p>
-            <input id="text-input" type="text" name="q" />
-            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          <div class="as_inputs">
+            <p class="advanced-spec">this exact word or phrase:</p>
+            <input type="text" name="as_epq" />
+            <div>
+              <p class="hide">
+                Put exact words in quotes:
+                <span class="color-white">"rat terrier"</span>
+              </p>
+            </div>
           </div>
-          <div class="as_oq">
-            <p>all these worlds: </p>
-            <input id="text-input" type="text" name="q" />
-            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          <div class="as_inputs">
+            <p class="advanced-spec">any of these words:</p>
+            <input type="text" name="as_oq" />
+            <div>
+              <p class="hide">
+                Type <span>OR</span> between all the words you want: <span
+                  class="color-white"
+                  >miniature OR standard</span
+                >
+              </p>
+            </div>
           </div>
-          <div class="as_eq=d">
-            <p>all these worlds: </p>
-            <input id="text-input" type="text" name="q" />
-            <p>Type the important words: <span class="color-white">tri-colour rat terrier</span></p>
+          <div class="as_inputs">
+            <p class="advanced-spec">none of these words:</p>
+            <input type="text" name="as_eq" />
+            <div>
+              <p class="hide">
+                Put a minus sign just before words that you don't want:
+                <span class="color-white">-rodent, -"Jack Russell" </span>
+              </p>
+            </div>
           </div>
-          <div class="buttons">
-            <input type="submit" value="Google Search" />
+          <div class="as_inputs">
+            <div></div>
+            <div>
+              <input id="advanced-btn" type="submit" value="Advanced Search" />
+            </div>
+            <div></div>
           </div>
+          
+          <input type="hidden" id="hiddenBtn" name="as_occt" value="any">
+          <input type="hidden" id="hiddenBtn" name="safe" value="images">
         </form>
       </div>
     </div>
